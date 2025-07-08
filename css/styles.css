@@ -40,7 +40,8 @@ body {
   font-size: var(--text-size-default);
   line-height: var(--line-height-default);
   letter-spacing: var(--letter-spacing-default);
-  overflow-x: hidden; /* A1 — запрет горизонтального скролла */
+  overflow-x: hidden;
+  /* A1 — запрет горизонтального скролла */
   background-color: var(--bg-color);
   color: var(--text-color);
 }
@@ -121,7 +122,8 @@ button:focus {
 }
 
 .nav-list {
-  display: none; /* C1 — меню скрыто на мобилах */
+  display: none;
+  /* C1 — меню скрыто на мобилах */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -148,7 +150,8 @@ button:focus {
 
 /* --- Контактная информация в хедере --- */
 .contact-info {
-  display: none; /* Скрыта на мобилах */
+  display: none;
+  /* Скрыта на мобилах */
   font-style: normal;
 }
 
@@ -212,11 +215,14 @@ button:focus {
   position: fixed;
   top: 0;
   left: 0;
-  width: 280px; /* C3 — ширина меню по макету */
-  height: 100vh; /* C4 — меню по высоте вьюпорта */
+  width: 280px;
+  /* C3 — ширина меню по макету */
+  height: 100vh;
+  /* C4 — меню по высоте вьюпорта */
   background-color: var(--bg-color);
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
-  padding: 60px 24px 24px; /* Чтобы не перекрывало хедер */
+  padding: 60px 24px 24px;
+  /* Чтобы не перекрывало хедер */
   transform: translateX(-100%);
   transition: transform 0.3s ease;
   z-index: 1000;
@@ -689,7 +695,7 @@ button:focus {
   pointer-events: none;
 }
 
-.agree-checkbox:checked + .form-agreement .checkbox-icon-privacy {
+.agree-checkbox:checked+.form-agreement .checkbox-icon-privacy {
   display: block;
 }
 
