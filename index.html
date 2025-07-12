@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>WebStudio</title>
 
     <!-- Normalize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
-        integrity="sha512-71ezP7JxLKMrvxZ3AOtXZSlZ1LCi2vy/N3o4z4h5/n0Z3j6o0Tquqk7VwSeH+mZC4f5Xs9y1oDREZ3pPYtjDXg=="
+        integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Google Fonts -->
@@ -24,7 +24,11 @@
 <body>
     <header class="site-header">
         <div class="container">
-            <button class="mobile-menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false"></button>
+            <button class="mobile-menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
             <nav class="header-nav">
                 <a class="logo" href="./index.html">
                     Web<span class="logo-part">Studio</span>
@@ -54,21 +58,61 @@
             </address>
         </div>
     </header>
-
     <nav class="mobile-menu" aria-hidden="true">
+        <!-- Кнопка закрытия меню -->
+        <button class="mobile-menu-close" type="button" aria-label="Close menu">
+            <span class="circle-bg">
+                <svg width="8" height="8" aria-hidden="true" focusable="false">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </span>
+        </button>
+
+        <!-- Навигация -->
         <ul class="mobile-nav-list">
-            <li><a href="./index.html">Studio</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contacts</a></li>
+            <li><a class="nav-link studio-link" href="./index.html">Studio</a></li>
+            <li><a class="nav-link" href="#">Portfolio</a></li>
+            <li><a class="nav-link" href="#">Contacts</a></li>
         </ul>
+
+        <!-- Контакты -->
+        <div class="mobile-contact">
+            <a class="phone-link" href="tel:+11234567890">+1 (123) 456 78 90</a>
+            <a class="email-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+        </div>
+
+        <!-- Социальные иконки -->
+        <div class="mobile-social-icons">
+            <a class="social-link" href="#">
+                    <svg class="social-icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>                
+                </a>
+            <a class="social-link" href="#">
+                <svg class="social-icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+            </a>
+            <a class="social-link" href="#">
+                <svg class="social-icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+            </a>
+            <a class="social-link" href="#">
+                <svg class="social-icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+            </a>
+        </div>
     </nav>
 
     <main>
         <section class="hero section">
             <div class="container">
                 <h1 class="hero-title">
-                    Effective Solutions <br />
-                    for Your Business
+                    Effective <br />
+                    Solutions <br />
+                    for Your <br />Business
                 </h1>
                 <button class="btn-services" type="button" data-modal-open>
                     Order Service
@@ -81,11 +125,7 @@
                 <h2 class="visually-hidden">Our Values</h2>
                 <ul class="values-list">
                     <li class="value-item">
-                        <div class="icon-box">
-                            <svg class="value-icon" width="64" height="64">
-                                <use href="./images/icons.svg#icon-antenna"></use>
-                            </svg>
-                        </div>
+
                         <h3 class="value-title">Strategy</h3>
                         <p class="value-text">
                             Our goal is to identify the business problem to walk away with the perfect and creative
@@ -93,11 +133,7 @@
                         </p>
                     </li>
                     <li class="value-item">
-                        <div class="icon-box">
-                            <svg class="value-icon" width="64" height="64">
-                                <use href="./images/icons.svg#icon-clock"></use>
-                            </svg>
-                        </div>
+
                         <h3 class="value-title">Punctuality</h3>
                         <p class="value-text">
                             Bring the key message to the brand's audience for the best price within the shortest
@@ -105,11 +141,7 @@
                         </p>
                     </li>
                     <li class="value-item">
-                        <div class="icon-box">
-                            <svg class="value-icon" width="64" height="64">
-                                <use href="./images/icons.svg#icon-computer"></use>
-                            </svg>
-                        </div>
+
                         <h3 class="value-title">Diligence</h3>
                         <p class="value-text">
                             Research and confirm brands with the strongest digital growth opportunities and minimize
@@ -117,11 +149,7 @@
                         </p>
                     </li>
                     <li class="value-item">
-                        <div class="icon-box">
-                            <svg class="value-icon" width="64" height="64">
-                                <use href="./images/icons.svg#icon-astronaut"></use>
-                            </svg>
-                        </div>
+
                         <h3 class="value-title">Technologies</h3>
                         <p class="value-text">
                             Design practice focused on digital experiences. We bring forth a deep passion for
@@ -437,7 +465,7 @@
                 <p class="subscribe-text">Subscribe</p>
                 <form class="subscribe-form" name="subscribe" method="post" action="#">
                     <label class="subscribe-label" for="email-input">
-                        <input class="subscribe-input" id="email-input" type="email" name="email" placeholder="E‑mail"
+                        <input class="subscribe-input" id="email-input" type="email" name="email" placeholder="E mail"
                             required />
                     </label>
                     <button class="subscribe-btn" type="submit">
@@ -455,13 +483,15 @@
     <div class="modal-overlay" data-modal>
         <div class="modal">
             <button class="modal-close" type="button" data-modal-close aria-label="Close modal">
+                <span class="circle-bg"></span>
                 <svg width="8" height="8" aria-hidden="true" focusable="false">
                     <use href="./images/icons.svg#icon-close"></use>
                 </svg>
             </button>
 
             <p class="modal-title">
-                Leave your contacts and we will call you back
+                Leave your contacts and we will<br />
+                call you back
             </p>
 
             <form class="modal-form" name="contact" method="post" action="#">
@@ -511,10 +541,10 @@
                                 <use href="./images/icons.svg#icon-check"></use>
                             </svg>
                         </span>
-                        I accept the terms and conditions of the
-                        <a class="privacy-link" href="#" target="_blank" rel="noopener noreferrer">
-                            Privacy Policy
-                        </a>
+                        <span class="agreement-text">
+                            I accept the terms and conditions of the<br>
+                            <a href="#" class="privacy-link">Privacy Policy</a>
+                        </span>
                     </label>
                 </div>
 
@@ -545,6 +575,13 @@
             refs.menuToggle.addEventListener('click', () => {
                 const isOpen =
                     refs.mobileMenu.classList.toggle('is-open');
+                const closeMenuBtn = document.querySelector('.mobile-menu-close');
+                closeMenuBtn.addEventListener('click', () => {
+                    refs.mobileMenu.classList.remove('is-open');
+                    refs.menuToggle.setAttribute('aria-expanded', false);
+                    refs.mobileMenu.setAttribute('aria-hidden', true);
+                    document.body.classList.remove('no-scroll');
+                });
                 refs.menuToggle.setAttribute(
                     'aria-expanded',
                     isOpen
@@ -556,6 +593,7 @@
                 document.body.classList.toggle('no-scroll', isOpen);
             });
         })();
+
     </script>
 </body>
 
